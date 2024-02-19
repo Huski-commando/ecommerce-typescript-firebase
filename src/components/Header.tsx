@@ -3,11 +3,12 @@
 import { useEffect, useState } from "react";
 import { Logo } from "./Logo";
 import { navItems } from "@/lib/utilities";
-import Navbar from "./Navbar";
 import { Button } from "./ui/button";
 import { useAppDispatch, useAppSelector } from "@/redux/store";
 import { FaMoon, FaSun } from "react-icons/fa";
 import { toggleTheme } from "../redux/themeSlice/themeSlice";
+
+import Navbar from "./Navbar";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);

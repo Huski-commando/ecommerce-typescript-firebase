@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { type IconType } from "react-icons";
 import { NavLink } from "react-router-dom";
 
@@ -20,4 +21,4 @@ const Navbar = ({ url, text, Icon }: NavbarProps) => {
   );
 };
 
-export default Navbar;
+export default memo(Navbar);
