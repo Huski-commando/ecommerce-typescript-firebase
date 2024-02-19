@@ -16,7 +16,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <Header />
-      <div className="mt-20">
+      <div className="mt-16">
         <Suspense fallback={<Loader />}>
           <Routes>
             <Route path="/" element={<Home />} />

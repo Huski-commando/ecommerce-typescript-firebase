@@ -10,7 +10,7 @@ interface NavbarProps {
 const Navbar = ({ url, text, Icon }: NavbarProps) => {
   const activeClass = ({ isActive }: { isActive: boolean }) =>
     isActive
-      ? `text-red-500 flex gap-1 items-center bg-white px-2 py-1`
+      ? `text-red-500 flex gap-1 items-center px-2 py-1`
       : `text-gray-500 flex gap-1 items-center px-2 py-1`;
 
   return (
