@@ -1,18 +1,14 @@
-// import { useEffect, useState } from "react";
-
-import { Suspense, lazy, useEffect, useState } from "react";
-import { Logo } from "./Logo";
-
-import { Button } from "./ui/button";
+import { useEffect, useState } from "react";
 import { useAppDispatch, useAppSelector } from "@/redux/store";
 import { FaMoon, FaSun } from "react-icons/fa";
-import { toggleTheme } from "../redux/themeSlice/themeSlice";
-
-import { navItems } from "@/lib/utilities";
 import { NavLink } from "react-router-dom";
-// import MobileNav from "./MobileNav";
-const MobileNav = lazy(() => import("./MobileNav"));
 import { MdOutlineLogin } from "react-icons/md";
+
+import { Logo } from "./Logo";
+import { Button } from "./ui/button";
+import { toggleTheme } from "../redux/themeSlice/themeSlice";
+import { navItems } from "@/lib/utilities";
+import MobileNav from "./MobileNav";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -78,11 +74,9 @@ const Header = () => {
             {theme === "light" ? <FaSun /> : <FaMoon />}
           </Button>
 
-          <Suspense fallback={<h1>Loading...</h1>}>
-            <div className="flex sm:hidden">
-              <MobileNav />
-            </div>
-          </Suspense>
+          <div className="flex sm:hidden">
+            <MobileNav />
+          </div>
         </div>
       </nav>
     </header>
