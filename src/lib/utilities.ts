@@ -20,10 +20,4 @@ export const navItems = [
     navLinks: "/cart",
     Icon: MdOutlineShoppingCart,
   },
-  {
-    id: nanoid(),
-    name: "Login",
-    navLinks: "/login",
-    Icon: MdOutlineLogin,
-  },
 ];
